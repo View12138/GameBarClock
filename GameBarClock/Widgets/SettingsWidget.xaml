@@ -1,0 +1,91 @@
+﻿<Page
+    x:Class="GameBarClock.Widgets.SettingsWidget"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameBarClock.Widgets"
+    xmlns:helpers="using:GameBarClock.Helpers"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:GameBarClock.ViewModels"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:ui="using:Microsoft.Toolkit.Uwp.UI"
+    xmlns:media="using:Microsoft.Toolkit.Uwp.UI.Media"
+    d:Width="384"
+    d:Height="600"
+    d:RequestedTheme="Dark"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True"
+    mc:Ignorable="d">
+    <d:Page.DataContext>
+        <vm:SettingsViewModel/>
+    </d:Page.DataContext>
+    <Page.Resources>
+        <helpers:DefaultDateTimeFormatStringConverter x:Key="DefaultDateTimeFormatStringConverter"/>
+        <media:AttachedCardShadow x:Key="CommonShadow" Offset="4" BlurRadius="16" Opacity="0.2"/>
+    </Page.Resources>
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical" Margin="12" Spacing="12">
+                <ComboBox x:Uid="Language" d:Header="语言" Grid.Column="0" HorizontalAlignment="Stretch"
+                      ItemsSource="{Binding Languages}" SelectedItem="{Binding Language, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <TextBlock Text="{Binding Name}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <ComboBox x:Uid="TextAlignment" d:Header="文本对齐" Grid.Column="0" HorizontalAlignment="Stretch" ItemsSource="{Binding TextAlignments}" SelectedItem="{Binding TextAlignment, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="{Binding Icon}" />
+                                <TextBlock Text="{Binding Name}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBox x:Name="DateTimeFormat" x:Uid="DateTimeFormat" d:Header="时间格式化字符串" d:PlaceholderText="默认: yyyy-MM-dd HH:mm:ss" 
+                     Text="{Binding TextFormat, Mode=TwoWay, Converter={StaticResource DefaultDateTimeFormatStringConverter}}"
+                     GotFocus="DateTimeFormat_GotFocus"  LostFocus="DateTimeFormat_LostFocus"/>
+                <ToggleSwitch x:Uid="WeekSetting" d:Header="是否显示星期" d:OnContent="显示" d:OffContent="隐藏" Grid.Column="1" IsOn="{Binding ShowWeek, Mode=TwoWay}" HorizontalAlignment="Stretch"/>
+
+                <Slider x:Uid="TextSize" d:Header="文本大小" Value="{Binding TextSize, Mode=TwoWay}" Minimum="8" Maximum="48" StepFrequency="1"/>
+                <ComboBox x:Uid="TextColor" d:Header="文本颜色" HorizontalAlignment="Stretch" ItemsSource="{Binding ThemeColors}" SelectedItem="{Binding ThemeColor, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <Rectangle Width="12" Height="12" Fill="{Binding Value}" Stroke="{ThemeResource CheckBoxBorderThemeBrush}" StrokeThickness="1"/>
+                                <TextBlock Text="{Binding Name}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <ComboBox x:Uid="TextFamily" d:Header="字体" HorizontalAlignment="Stretch" MaxDropDownHeight="240" ItemsSource="{Binding TextFamilies}" SelectedItem="{Binding TextFamily, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" FontFamily="{Binding Value}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <ComboBox x:Uid="TextWeight" d:Header="字型" HorizontalAlignment="Stretch" MaxDropDownHeight="240" ItemsSource="{Binding TextWeights}" SelectedItem="{Binding TextWeight, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" FontWeight="{Binding Value}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+        </ScrollViewer>
+
+        <muxc:InfoBar d:IsOpen="true" Margin="6" 
+                      ui:Effects.Shadow="{StaticResource CommonShadow}"
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Stretch"
+                      Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}" 
+                      IsOpen="{Binding ShowTips, Mode=TwoWay}" 
+                      Severity="{Binding TipsSeverity, Mode=OneWay}" 
+                      Message="{Binding Tips, Mode=OneWay}" />
+    </Grid>
+</Page>

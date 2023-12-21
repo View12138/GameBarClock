@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='gb2312'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GameBarClock.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TextAlignment" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="TextWeight" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="TextColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#0078D4</Value>
+    </Setting>
+    <Setting Name="TextSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">14</Value>
+    </Setting>
+    <Setting Name="TextFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">yyyy-MM-dd HH:mm:ss</Value>
+    </Setting>
+    <Setting Name="ShowWeek" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TextFamily" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Segoe UI</Value>
+    </Setting>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">System</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

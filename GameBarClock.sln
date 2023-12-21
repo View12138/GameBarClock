@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameBarClock", "GameBarClock\GameBarClock.csproj", "{794AE937-7EE1-4A00-91F7-E6411D04B595}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|ARM.ActiveCfg = Debug|ARM
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|ARM.Build.0 = Debug|ARM
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|ARM.Deploy.0 = Debug|ARM
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|ARM64.Build.0 = Debug|ARM64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|x64.ActiveCfg = Debug|x64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|x64.Build.0 = Debug|x64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|x64.Deploy.0 = Debug|x64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|x86.ActiveCfg = Debug|x86
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|x86.Build.0 = Debug|x86
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Debug|x86.Deploy.0 = Debug|x86
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|ARM.ActiveCfg = Release|ARM
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|ARM.Build.0 = Release|ARM
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|ARM.Deploy.0 = Release|ARM
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|ARM64.ActiveCfg = Release|ARM64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|ARM64.Build.0 = Release|ARM64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|ARM64.Deploy.0 = Release|ARM64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|x64.ActiveCfg = Release|x64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|x64.Build.0 = Release|x64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|x64.Deploy.0 = Release|x64
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|x86.ActiveCfg = Release|x86
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|x86.Build.0 = Release|x86
+		{794AE937-7EE1-4A00-91F7-E6411D04B595}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A9CCB2B-5E99-4ABB-A726-2E7629A0E8BA}
+	EndGlobalSection
+EndGlobal
